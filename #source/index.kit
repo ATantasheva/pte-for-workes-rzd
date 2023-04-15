@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <title>SOURCE-INDEX.KIT</title><!--имя файла-->
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <meta name="format-detection" content="telephone=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/custom.css">
+   <link rel="shortcut icon" href="favicon.ico"> <!--иконка в браузере-->
+   <!-- <meta name="robots" content="noindex, nofollow" /> -->
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <div id="popup-enter" class="popup">
+         <div class="popup__body">
+            <div class="popup__content popup__enter">
+               <a href="#header" class="popup__close close-popup">X</a>
+               <div class="popup__title">Вход</div>
+               <div class="popup__text">
+                  <form method="post" class="form__body">
+                     <div class="block__popup">
+                        <input class="input form__input login-email" type="text" name="email"
+                           placeholder="Введите адрес электронной почты">
+                        <input class="input form__input login-password1" name="password1" type="password"
+                           placeholder="Введите пароль">
+                        <button class="btn enter login-submit">Войти</button>
+
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="popup-reg" class="popup-registr popup">
+         <div class="popup__body">
+            <div class="popup__content">
+               <a href="#header" class="popup__close close-popup">X</a>
+               <div class="popup__title">Регистрация</div>
+               <div class="popup__text">
+                  <form id="form" class="form__body" method="post">
+                     <div class="block__popup">
+                        <div class="form__item">
+                           <label for="formName" class="form__label">Имя*:</label>
+                           <input id="formName" type="text" name="name" class="form__input _req signup-name">
+                        </div>
+                        <div class="form__item">
+                           <label for="formEmail" class="form__label">E-mail*:</label>
+                           <input id="formEmail" type="text" name="email" class="form__input _req _email signup-email">
+                        </div>
+                        <div class="form__item">
+                           <label for="formPassword1" class="form__label">Придумайте пароль*:</label>
+                           <input id="formPassword1" type="password" name="password1"
+                              class="form__input _req password signup-password1">
+                        </div>
+                        <div class="form__item">
+                           <label for="formPassword2" class="form__label">Повторите пароль*:</label>
+                           <input id="formPassword2" type="password" name="password2"
+                              class="form__input _req password1 signup-password2">
+                        </div>
+                        <div class="form__item">
+                           <div class="checkbox">
+                              <input id="formAgreement" checked type="checkbox" name="agreement"
+                                 class="checkbox__input _req">
+                              <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку
+                                    персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+                           </div>
+                        </div>
+                        <button type="submit" class="form__button btn enter signup-submit">Зарегистрироваться</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="button__navigation">
+         <div class="button button__up">
+            <a href="#up" class="button-nav up">
+               <img src="./img/icons/arrow-up.png" alt='стрелка'>
+            </a>
+         </div>
+         <div class="button button__plus">
+            <a href="#" class="button-nav plus">
+               <img src="./img/icons/plus.png" alt='добавить'>
+            </a>
+         </div>
+         <div class="button button__bookmark">
+            <a href="#" class="button-nav bookmark">
+               <img src="./img/icons/bookmark.png" alt='закладки'>
+            </a>
+         </div>
+      </div>
+      <!--@import "header.html"-->
+      <!--@import "content.html"-->
+      <!-- @import "footer.html" -->
+
+      <div class="cookie_notice">
+         Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения
+         работоспособности и улучшения качества обслуживания. Продолжая
+         использовать этот сайт, вы автоматически соглашаетесь с использованием данных технологий.
+         <div>
+            <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
+            <a class="cookie_btn" href="/index-privacy.html" target="_blank">Политика
+               конфиденциальности</a>
+         </div>
+      </div>
+
+   </div>
+
+
+
+   <!--подключаем js -->
+   <!-- @import "js.html" -->
+
+</body>
+
+</html>
