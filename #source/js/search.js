@@ -102,9 +102,9 @@ function FindOnPage(inputId) {
       }
 
    }
-   let userEmail = getCookie('email');
-   console.log(userEmail);
-   if(userEmail) {
+   let userEmailsearch = getCookie('email');
+   console.log(userEmailsearch);
+   if(userEmailsearch) {
       // Получение выделенного текста с помощью анонимной самовызывающейся функции.
 function get_text() {
    // Объявление переменной.

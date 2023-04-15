@@ -104,7 +104,8 @@ if(!isset($_COOKIE['email']) OR trim($_COOKIE['email']) == '') {
    </div>
    <script src="js/ajax.js"></script>
    <script src="js/get_user_data.js"></script>
-   <script src="js/main.js"></script>
+   <!--    <script src="js/main.js"></script>-->
+
    <script src="js/menu-burger.js"></script>
 
    <script src="js/logout.js"></script>

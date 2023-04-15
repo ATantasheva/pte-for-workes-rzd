@@ -215,7 +215,7 @@ function next() {
 }
 */
 
-/*
+
 // Получение выделенного текста с помощью анонимной самовызывающейся функции.
 function get_text() {
    // Объявление переменной.
@@ -245,7 +245,7 @@ var p_arr = document.getElementsByTagName("p");
 for (var i = 0; i < p_arr.length; i++) {
    p_arr[i].onmouseup = get_text;
 }
-*/
+
 //===========================================================================
 //создание закладок
 document.querySelector('#bookmark-submit').onclick = function (event) {
