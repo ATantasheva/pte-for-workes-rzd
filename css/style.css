@@ -149,6 +149,11 @@ h6 {
     padding: 0 10px;
   }
 }
+@media (max-width: 479.98px) {
+  .container {
+    padding: 0 5px;
+  }
+}
 
 .main-page {
   display: -webkit-box;
@@ -787,7 +792,7 @@ footer {
   background: #000;
   position: absolute;
   right: -18px;
-  top: 7px;
+  top: 17px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -810,6 +815,17 @@ footer {
 
 .block__text._active {
   display: block;
+}
+
+.sub-title {
+  text-transform: lowercase;
+  font-size: 12px;
+  line-height: 130%;
+  font-weight: 600;
+  margin: 15px 0px 10px 0px;
+}
+.sub-title:hover {
+  text-decoration: underline;
 }
 
 .about__text {
@@ -883,13 +899,6 @@ footer {
     height: 100%;
   }
 }
-@media (max-width: 360px) {
-  .btn {
-    line-height: 100%;
-    padding: 4px 7px;
-  }
-}
-
 h1,
 h2,
 h3 {
@@ -1073,7 +1082,7 @@ h2 {
       -ms-user-select: none;
           user-select: none;
   border: 2px solid #000;
-  background-color: rgb(145, 182, 145);
+  background-color: #9597fc;
   padding: 7px;
 }
 
@@ -1093,6 +1102,13 @@ h2 {
   cursor: pointer;
   padding: 0px 7px;
 }
+.counter__button_min:hover {
+  background: #ff7777;
+}
+.counter__button_plus:hover {
+  background: #ff7777;
+}
+
 .counter__input {
   padding-left: 0px;
   width: 40px;

@@ -143,6 +143,11 @@ $md4: 479.98; //мал смартфон
       max-width: none;
       padding: 0 10px;
    }
+
+   @media (max-width:$md4+px) {
+      // max-width: 270px;
+      padding: 0 5px;
+   }
 }
 
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -351,7 +356,7 @@ button.btn-for-bookmark {
    background: #000;
    position: absolute;
    right: -18px;
-   top: 7px;
+   top: 17px;
    transition: transform 0.3s ease 0s
 }
 
@@ -369,6 +374,20 @@ button.btn-for-bookmark {
 
 .block__text._active {
    display: block;
+}
+
+
+
+.sub-title {
+   text-transform: lowercase;
+   font-size: 12px;
+   line-height: 130%;
+   font-weight: 600;
+   margin: 15px 0px 10px 0px;
+
+   &:hover {
+      text-decoration: underline;
+   }
 }
 
 //==========================================================================================================
@@ -448,10 +467,7 @@ button.btn-for-bookmark {
       height: 100%;
    }
 
-   @media(max-width: 360px) {
-      line-height: 100%;
-      padding: 4px 7px;
-   }
+   @media(max-width: 360px) {}
 }
 
 
@@ -662,7 +678,7 @@ h2 {
    align-items: center;
    user-select: none;
    border: 2px solid #000;
-   background-color: rgb(145, 182, 145);
+   background-color: #9597fc;
    padding: 7px;
 }
 
@@ -678,9 +694,17 @@ h2 {
    cursor: pointer;
    padding: 0px 7px;
 
-   &_min {}
+   &_min {
+      &:hover {
+         background: #ff7777;
+      }
+   }
 
-   &_plus {}
+   &_plus {
+      &:hover {
+         background: #ff7777;
+      }
+   }
 }
 
 
