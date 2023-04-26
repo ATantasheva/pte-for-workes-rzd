@@ -3,15 +3,20 @@ let copy_page = "";
 const allBlocks = document.querySelector('.order__main');
 console.log(allBlocks);
 function TrimStr(s) { //удаляем пробелы
-   s = s.replace(/^\s+/g, '');
-   return s.replace(/\s+$/g, '');
+   s = s.replace(/^\s+/gi, '');
+   console.log(s);
+   // s = /s/gi;
+   return s.replace(/\s+$/gi, '');
+
 }
 function FindOnPage(inputId) {
    let obj = document.getElementById(inputId);
    console.log(obj);
    let textToFind;
+
    if (obj) {
       textToFind = TrimStr(obj.value);
+      console.log(textToFind);
    } else {
       alert("Введенная фраза не найдена");
       return;
@@ -30,7 +35,7 @@ function FindOnPage(inputId) {
    }
    //перерисовка
    allBlocks.innerHTML = allBlocks.innerHTML.replace(eval("/name=" + lastResFind + "/g"), " ");
-   allBlocks.innerHTML = allBlocks.innerHTML.replace(eval("/" + textToFind + "/g"),
+   allBlocks.innerHTML = allBlocks.innerHTML.replace(eval("/" + textToFind + "/gi"),
       "<a class=yellow id=scroll data-input=" + textToFind + " style='background:#FFF820'>" + textToFind + "</a>");
    lastResFind = textToFind;
 
@@ -76,12 +81,12 @@ function FindOnPage(inputId) {
          value = activeItemIndex + 1;
          console.log(value);
          inputCount.innerHTML = `${value} из ${searchLink.length}`;
-         searchLink[activeItemIndex].scrollIntoView({behavior: 'smooth' });
+         searchLink[activeItemIndex].scrollIntoView({ behavior: 'smooth' });
       } else {
          value = activeItemIndex;
          console.log(value);
          inputCount.innerHTML = `${value} из ${searchLink.length}`;
-         searchLink[activeItemIndex].scrollIntoView({behavior: 'smooth' });
+         searchLink[activeItemIndex].scrollIntoView({ behavior: 'smooth' });
       }
 
    }
@@ -104,36 +109,36 @@ function FindOnPage(inputId) {
    }
    let userEmailsearch = getCookie('email');
    console.log(userEmailsearch);
-   if(userEmailsearch) {
+   if (userEmailsearch) {
       // Получение выделенного текста с помощью анонимной самовызывающейся функции.
-function get_text() {
-   // Объявление переменной.
-   let text;
-   let textarea = document.querySelector('.textarea');
-   if (window.getSelection) {
-      // Современный способ.
-      text = window.getSelection().toString();
-   } else if (document.getSelection) {
-      // Старый способ.
-      text = document.getSelection();
-   } else if (document.selection) {
-      // IE.
-      text = document.selection.createRange().text;
-   }
+      function get_text() {
+         // Объявление переменной.
+         let text;
+         let textarea = document.querySelector('.textarea');
+         if (window.getSelection) {
+            // Современный способ.
+            text = window.getSelection().toString();
+         } else if (document.getSelection) {
+            // Старый способ.
+            text = document.getSelection();
+         } else if (document.selection) {
+            // IE.
+            text = document.selection.createRange().text;
+         }
 
-   // Вывод результата, если получен выделенный текст.
-   if (text) {
-      textarea.innerHTML = `${text}`;
-      console.log(textarea);
-   }
-}
+         // Вывод результата, если получен выделенный текст.
+         if (text) {
+            textarea.innerHTML = `${text}`;
+            console.log(textarea);
+         }
+      }
 
-// Применять эту функцию к тегам, содержащим текстовую информацию.
-var p_arr = document.getElementsByTagName("p");
+      // Применять эту функцию к тегам, содержащим текстовую информацию.
+      var p_arr = document.getElementsByTagName("p");
 
-for (var i = 0; i < p_arr.length; i++) {
-   p_arr[i].onmouseup = get_text;
-}
+      for (var i = 0; i < p_arr.length; i++) {
+         p_arr[i].onmouseup = get_text;
+      }
 
    }
 }

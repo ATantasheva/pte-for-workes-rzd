@@ -306,12 +306,12 @@ function getBookmarksData(result) {
          <textarea type="text" class="form__input bookmarktitle"> ${response[i].title}</textarea>
       </div>
       <div class="">
-         <button number="${response[i]['number']}" data-tooltip="Сохранить изменения" type="submit" class="button-nav bookmark__edit" type="update">
+         <button number="${response[i]['number']}" data-tooltip="Сохранить изменения" type="submit" class="bookmark__edit" type="update">
             <img  src="./img/icons/edit.png" alt="Редактровать">
          </button>
       </div>
       <div class="">
-      <button number="${response[i]['number']}" data-tooltip="Удалить закладку" type="submit" href="#" class="button-nav bookmark__delete">
+      <button number="${response[i]['number']}" data-tooltip="Удалить закладку" type="submit" href="#" class="bookmark__delete">
             <img src="./img/icons/delete.png" alt="Удалить">
          </button>
       </div>
@@ -323,18 +323,11 @@ function getBookmarksData(result) {
       bookmarksPage.insertAdjacentHTML("afterbegin", bookmarkText);
 
    }
-}
+   //по клику на кнопку  с карандашом отправляем данные на сервер
+   const bookmarkEditBtn = document.querySelectorAll('.bookmark__edit');
+   console.log(bookmarkEditBtn);
 
-//====================================================================
-//по клику на кнопку  с карандашом отправляем данные на сервер
-window.addEventListener('load', bookmarkEdit);
-function bookmarkEdit() {
-   const bookmarkEdit = document.querySelectorAll('.bookmark__edit');
-   console.log(bookmarkEdit);
-   const bookmarkEditArray = Array.from(bookmarkEdit);
-   console.log(bookmarkEditArray);
-
-   bookmarkEditArray.forEach(btn => {
+   bookmarkEditBtn.forEach(btn => {
       btn.addEventListener('click', function (event) {
          event.preventDefault();
          //получаем значение атрибута кнопки
@@ -377,6 +370,90 @@ function bookmarkEdit() {
       }
    }
 
+   //по клику на кнопку удаляем закладку из БД
+   const bookmarkDelete = document.querySelectorAll('.bookmark__delete');
+   console.log(bookmarkDelete);
+
+   bookmarkDelete.forEach(btn => {
+      btn.addEventListener('click', function (event) {
+         event.preventDefault();
+         //получаем значение атрибута кнопки
+         let deleteAttribute = btn.getAttribute('number');
+         console.log(deleteAttribute);
+         let deleteBookmarkData = {
+            "userEmail": emailUser,
+            "number": deleteAttribute,
+         }
+         ajax('core/delete_bookmarks.php', 'POST', deleteBookmarks, deleteBookmarkData);
+      })
+   })
+   function deleteBookmarks(result2) {
+      console.log(result2);
+      if (result2 == 1) {
+         alert('Закладка удалена!');
+         location.reload();
+      } else if (result2 == 2) {
+         alert('Ошибка. Повторите попытку позже!');
+      }
+   }
+
+}
+
+
+
+//====================================================================
+//по клику на кнопку  с карандашом отправляем данные на сервер
+/*
+window.addEventListener('load', bookmarkEdit);
+function bookmarkEdit() {
+   const bookmarkEdit = document.querySelectorAll('.bookmark__edit');
+   console.log(bookmarkEdit);
+   const bookmarkEditArray = Array.from(bookmarkEdit);
+   console.log(bookmarkEditArray);
+ 
+   bookmarkEditArray.forEach(btn => {
+      btn.addEventListener('click', function (event) {
+         event.preventDefault();
+         //получаем значение атрибута кнопки
+         let editAttribute = btn.getAttribute('number');
+         console.log(editAttribute);
+         const bookmarkItem = event.target.closest('.bookmark__item');
+         console.log(bookmarkItem);
+ 
+         let title = bookmarkItem.querySelector('.bookmarktitle');
+         let text = bookmarkItem.querySelector('.bookmark__text');
+         console.log(title);
+         title.addEventListener('change', changeTextarea);
+         text.addEventListener('change', changeTextareaText); // 
+         //слушаем изменения поля 
+         function changeTextarea(title) {
+            return title.value;
+         };
+         function changeTextareaText(text) {
+            return text.value;
+         };
+         let titleValue = changeTextarea(title);
+         let textValue = changeTextareaText(text);
+         console.log(titleValue);
+         let editeBookmarkData = {
+            "userEmail": emailUser,
+            "number": editAttribute,
+            "title": titleValue,
+            "text": textValue,
+         }
+         ajax('core/update_bookmarks_data.php', 'POST', updateBookmarks, editeBookmarkData);
+      });
+   });
+   function updateBookmarks(result2) {
+      console.log(result2);
+      if (result2 == 1) {
+         alert('Данные успешно обновлены!');
+ 
+      } else if (result2 == 2) {
+         alert('Ошибка обновления. Повторите попытку позже!');
+      }
+   }
+ 
 }
 
 
@@ -413,7 +490,7 @@ function bookmarkDelete() {
    }
 
 }
-
+*/
 //===============================
 //скрыть лишние кнопки со стр показать-закладки
 const bookmarkNone = document.querySelectorAll('.bookmark-none');
