@@ -222,12 +222,12 @@ h6 {
   z-index: 10;
   bottom: 20px;
   right: 20px;
-  background-color: #9597fc;
+  background-color: #484ace;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 .button:hover {
-  background-color: #ff7777;
+  background-color: #347c4e;
 }
 .button__plus {
   bottom: 80px;
@@ -367,15 +367,15 @@ button.btn-for-bookmark {
 }
 
 .logo-red {
-  color: #545454;
+  color: #484ace;
 }
 
 .logo-gray {
-  color: #5f62fc;
+  color: orange;
 }
 
 .logo-blue {
-  color: #ff4a4a;
+  color: #347c4e;
 }
 
 .logo {
@@ -828,6 +828,38 @@ footer {
   text-decoration: underline;
 }
 
+.title-number-img {
+  display: block;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+.picture {
+  margin: 20px 0px 0px 0px;
+}
+
+.table-pte_vertical img {
+  max-width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.table {
+  cursor: pointer;
+}
+
+.table-pte {
+  display: block;
+  text-align: center;
+}
+
+.table-pte img {
+  width: 100%;
+  max-height: 270px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .about__text {
   margin: 0px 0px 20px 0px;
 }
@@ -1082,7 +1114,7 @@ h2 {
       -ms-user-select: none;
           user-select: none;
   border: 2px solid #000;
-  background-color: #9597fc;
+  background-color: orange;
   padding: 7px;
 }
 
@@ -1103,10 +1135,10 @@ h2 {
   padding: 0px 7px;
 }
 .counter__button_min:hover {
-  background: #ff7777;
+  background: #347c4e;
 }
 .counter__button_plus:hover {
-  background: #ff7777;
+  background: #347c4e;
 }
 
 .counter__input {

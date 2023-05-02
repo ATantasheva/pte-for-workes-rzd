@@ -209,11 +209,11 @@ $md4: 479.98; //мал смартфон
    z-index: 10;
    bottom: 20px;
    right: 20px;
-   background-color: #9597fc;
+   background-color: #484ace;
    transition: all 0.3s ease 0s;
 
    &:hover {
-      background-color: #ff7777;
+      background-color: #347c4e;
    }
 
    &__navigation {}
@@ -397,6 +397,38 @@ button.btn-for-bookmark {
    &__section {}
 
    &__text {}
+}
+
+//рисунки в контенте
+.title-number-img {
+   display: block;
+   padding: 20px 0px 20px 0px;
+   text-align: center;
+}
+
+.picture {
+   margin: 20px 0px 0px 0px;
+}
+
+.table-pte_vertical img {
+   max-width: 300px;
+   object-fit: contain;
+}
+
+//таблица в контенте
+.table {
+   cursor: pointer;
+}
+
+.table-pte {
+   display: block;
+   text-align: center;
+}
+
+.table-pte img {
+   width: 100%;
+   max-height: 270px;
+   object-fit: contain;
 }
 
 .about {
@@ -678,7 +710,7 @@ h2 {
    align-items: center;
    user-select: none;
    border: 2px solid #000;
-   background-color: #9597fc;
+   background-color: orange;
    padding: 7px;
 }
 
@@ -696,13 +728,13 @@ h2 {
 
    &_min {
       &:hover {
-         background: #ff7777;
+         background: #347c4e;
       }
    }
 
    &_plus {
       &:hover {
-         background: #ff7777;
+         background: #347c4e;
       }
    }
 }

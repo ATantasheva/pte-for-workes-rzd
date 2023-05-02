@@ -1,3 +1,4 @@
+
 let lastResFind = "";
 let copy_page = "";
 const allBlocks = document.querySelector('.order__main');
@@ -9,7 +10,9 @@ function TrimStr(s) { //удаляем пробелы
    return s.replace(/\s+$/gi, '');
 
 }
+
 function FindOnPage(inputId) {
+
    let obj = document.getElementById(inputId);
    console.log(obj);
    let textToFind;
@@ -105,8 +108,10 @@ function FindOnPage(inputId) {
          inputCount.innerHTML = `${value} из ${searchLink.length}`;
          searchLink[activeItemIndex].scrollIntoView({ behavior: 'smooth' });
       }
-
    }
+
+   // Получение выделенного текста в поп-уап с закладкой
+
    let userEmailsearch = getCookie('email');
    console.log(userEmailsearch);
    if (userEmailsearch) {
