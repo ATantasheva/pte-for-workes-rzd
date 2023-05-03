@@ -35,7 +35,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 320px;
+  min-width: 280px;
   position: relative;
   width: 100%;
   color: #000;
@@ -151,6 +151,13 @@ h6 {
 }
 @media (max-width: 479.98px) {
   .container {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 280.98px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
     padding: 0 5px;
   }
 }
@@ -1234,6 +1241,10 @@ h2 {
 
 .bookmark-none.none {
   display: none;
+}
+
+.yellow {
+  scroll-margin-top: 10rem;
 }
 
 .popup {
