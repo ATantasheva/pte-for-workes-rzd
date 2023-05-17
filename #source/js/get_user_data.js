@@ -340,7 +340,7 @@ function getBookmarksData(result) {
          let text = bookmarkItem.querySelector('.bookmark__text');
          console.log(title);
          title.addEventListener('change', changeTextarea);
-         text.addEventListener('change', changeTextareaText); // 
+         text.addEventListener('change', changeTextareaText);  
          //слушаем изменения поля 
          function changeTextarea(title) {
             return title.value;

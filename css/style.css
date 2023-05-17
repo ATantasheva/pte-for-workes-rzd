@@ -862,7 +862,6 @@ footer {
 
 .table-pte img {
   width: 100%;
-  max-height: 270px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -947,6 +946,15 @@ h3 {
   text-transform: uppercase;
   line-height: 130%;
   padding: 30px 0px 20px 0px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 130%;
+  padding: 0px 0px 15px 0px;
 }
 
 @media (max-width: 767.98px) {
@@ -1245,6 +1253,26 @@ h2 {
 
 .yellow {
   scroll-margin-top: 10rem;
+}
+
+.table02 img {
+  max-height: 100%;
+}
+
+.table__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.table__picture .picture {
+  margin: 0px 10px 0px 0px;
 }
 
 .popup {

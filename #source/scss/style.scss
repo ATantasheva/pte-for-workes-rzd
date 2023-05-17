@@ -438,7 +438,7 @@ button.btn-for-bookmark {
 
 .table-pte img {
    width: 100%;
-   max-height: 270px;
+   //max-height: 270px;
    object-fit: contain;
 }
 
@@ -527,6 +527,15 @@ h3 {
    text-transform: uppercase;
    line-height: 130%;
    padding: 30px 0px 20px 0px;
+}
+
+h4 {
+   text-align: center;
+   font-size: 15px;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 130%;
+   padding: 0px 0px 15px 0px;
 }
 
 h1,
@@ -863,6 +872,20 @@ h2 {
 
 .yellow {
    scroll-margin-top: 10rem;
+}
+
+.table02 img {
+   max-height: 100%;
+}
+
+.table__picture {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+.table__picture .picture {
+   margin: 0px 10px 0px 0px;
 }
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
